@@ -1,8 +1,19 @@
-
-
 ## What Vue is?
-
-it's a box of tools, 
+it's a toolbox to make development easier
+- a JS framework for building interfaces — progressive, reactive, and component-based
+    - **progressive:** adaptable to other frameworks and libraries
+    - **reactive:** whenever something changes, the view updates automatically in the whole app
+- in the MVC structure, Vue is mainly focused on the View layer
+- main characteristics:
+    - single file components (SFCs):
+        - templates, scripts and style are in the same file, separated by blocks
+    - directives (like in JS):
+        - conditions and loops, binding, two-way data binding, events, watchers, etc.
+    - ecosystem
+        - vue devtools - browser
+        - vue CLI
+        - vue Router
+        - vueX
 
 ## How it can be used?
 #### example:
