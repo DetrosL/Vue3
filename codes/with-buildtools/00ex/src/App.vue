@@ -1,7 +1,12 @@
 <template>
-  <TheHeader /><!-- ou <TheHeader></TheHeader> -->
+  <TheHeader 
+    v-show="showHeader"
+  /><!-- ou <TheHeader></TheHeader> -->
 
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img
+    alt="Vue logo" 
+    src="./assets/logo.png"
+    >
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
@@ -12,8 +17,13 @@
   export default {
     name: 'App',
     components: {
+      HelloWorld,
       TheHeader
-      HelloWorld
+    },
+    data(){
+      return {
+        showHeader: true,
+      }
     }
   }
 </script>

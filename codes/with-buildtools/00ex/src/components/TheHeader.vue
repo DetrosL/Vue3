@@ -1,16 +1,16 @@
 <template>
-    <div>
-        Header
-    </div>
+    <header class='header'>
+         HEADER
+    </header>
 </template>
 <script>
     export default {
-        name: 'App',
-        components: {
-        HelloWorld
-        }
+        
     }
 </script>
 <style>
-    
+    .header {
+        background: #000;
+        color: #fff;
+    }
 </style>
