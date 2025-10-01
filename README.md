@@ -9,3 +9,6 @@ Source:
 #
 In general:
 - A framework that provides structure and support.
+
+Observation:
+- All the exercises are divided into branches... in the main branch I’m going to put the most important project.
