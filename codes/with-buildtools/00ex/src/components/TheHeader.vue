@@ -3,7 +3,7 @@
 
         <div 
             v-for="obj in todos"
-            v-bind:key="obj.id"    
+            :key="obj.id"    
             class="todos-item"
         >
             {{ obj.title }}
