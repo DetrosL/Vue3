@@ -3,6 +3,20 @@
     v-show="showHeader"
   /><!-- ou <TheHeader></TheHeader> -->
 
+  <div v-show="Name">
+    Nome: {{ fistName }} <br/>
+    Nome: {{ lastName }}
+  </div>
+  
+  <div v-show="showName">
+    Nome: {{ fistName }} <br/>
+    Nome: {{ lastName }}
+  </div>
+
+  <div v-if="accessLevel === 'admin'">Admin</div>
+  <div v-else-if="accessLevel === 'marketing'">Marketing</div>
+  <div v-else>User</div>
+
   <img
     alt="Vue logo" 
     src="./assets/logo.png"
@@ -23,6 +37,10 @@
     data(){
       return {
         showHeader: true,
+        fistName: 'Laiz',
+        lastName: 'Detros',
+        showName: false,
+        accessLevel: 'admin'
       }
     }
   }
