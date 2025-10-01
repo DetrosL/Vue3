@@ -1,28 +1,83 @@
 <template>
     <div>
 
-    <h2 :class=" { 'title': true, 'home-title': isHome } ">
-        Vue 3
-    </h2>
+        <div>
+            Two-way data binding <br>
+            v-model -> forms
+        </div>
 
-    <p :class="pClass">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-    </p>
+        <br><br>
+        <div>
+            <label>Name</label><br/>
+            <input
+                v-model="name"
+                type="text"
+                class="input"
+            > <br>
+            {{ name }}
+        </div>
 
-    <p :class="['text', { 'text-home': isHome }]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-    </p>
+        <br><br>
+        <div>
+            <label for="">books</label><br>
+            <select v-model="books">
+                <option value="">Choose</option>
+                <option value="tog">Throne of Glass</option>
+                <option value="eta">An Ember in the Ashes</option>
+                <option value="cc">Crescent City</option>
+            </select> <br>
+            {{ books }}
+        </div>
 
-        <div 
-            v-for="obj in todos"
-            :key="obj.id"    
-            class="todos-item"
-        >
-            <img
-                v-if="obj.imgSrc"
-                :src="obj.imgSrc"
-            >
-            {{ obj.title }}
+        <br><br>
+        <div>
+            <label for="">newsletter</label> <br>
+            <input
+                v-model="newsletter" 
+                type="radio"
+                value="yes"
+                > yes
+            <input
+                v-model="newsletter" 
+                type="radio"
+                value="no"
+                > no <br>
+            {{ newsletter }}
+        </div>
+
+        <br><br>
+        <div>
+            <label for="">contracts</label><br>
+            <input 
+                v-model="contract"
+                type="checkbox"> accept our terms... <br>
+            {{ contract }}
+        </div>
+
+        <br><br>
+        <div>
+            <label for="">select the colors you like</label><br>
+            <input
+                v-model="colors" 
+                type="checkbox"
+                value="red"
+                > red
+            <input
+                v-model="colors" 
+                type="checkbox"
+                value="purple"
+                > purple
+            <input
+                v-model="colors" 
+                type="checkbox"
+                value="black"
+                > black
+            <input
+                v-model="colors" 
+                type="checkbox"
+                value="blue"
+                > blue <br>
+                {{ colors }}
         </div>
 
     </div>
@@ -32,77 +87,34 @@
         name: 'App',
         data(){
             return {
-                isHome: true,
-                pClass: ['text', 'text-home'],
-                todos: [
-                    {
-                        "userId": 1,
-                        "id": 1,
-                        "title": "delectus aut autem",
-                        "completed": false,
-                        "imgSrc": 'https://placehold.co/150' 
-                    },
-                    {
-                        "userId": 1,
-                        "id": 2,
-                        "title": "quis ut nam facilis et officia qui",
-                        "completed": false
-                    },
-                    {
-                        "userId": 1,
-                        "id": 3,
-                        "title": "fugiat veniam minus",
-                        "completed": false,
-                        "imgSrc":'https://placehold.co/150'
-                    },
-                    {
-                        "userId": 1,
-                        "id": 4,
-                        "title": "et porro tempora",
-                        "completed": true
-                    },
-                    {
-                        "userId": 1,
-                        "id": 5,
-                        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-                        "completed": false
-                    }
-                ]
+                name: 'Daenerys Targaryen',
+                books: 'tog',
+                newsletter: 'yes',
+                contract: false,
+                colors: [],
             }
         }
     }
 </script>
 <style>
-    .title {
-        font-size: 20px;
-        color: blue;
+    * {
+        background-color: #18232e;
+        color: #FFF;
+        text-align: center;
     }
 
-    .home-title {
-        font-size: 40px;
-        color: green;
+    .input {
+        border: 1px solid #ccc; 
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        width: 200px;
     }
 
-    .text {
-        color: red;
-    }
-
-    .text-home {
-        color: #42b983;
-    }
-
-    .todos-item {
-        background: #000;
-        margin: 0 0 5px 0;
-        padding: 3px 6px;
-        color: #fff;
-    }
-    
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: #2c3e50;
         margin: 60px;
     }
 </style>
