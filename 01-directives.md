@@ -1,17 +1,16 @@
 ## DIRECTIVES
 #### used inside components
-	`v-show`, `v-if`, `v-for`
+`v-show`, `v-if`, `v-for`
 
 #### example:
-```
+```html
     <!-- v-show... -->
     <TheHeader 
         v-show="showHeader"
     />
 ```
-```
+```html
 <template>
-
     <!-- v-if... -->
     <div v-if="accessLevel === 'admin'">Admin</div>
     <div v-else-if="accessLevel === 'marketing'">Marketing</div>
