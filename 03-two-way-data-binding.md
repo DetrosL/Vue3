@@ -4,7 +4,7 @@
 - data ↔ interface
 
 #### examples:
-```
+```html
 	<div>
   		<label>name</label><br/>
   	<input v-model="name" type="text">
@@ -12,7 +12,7 @@
   	{{ name }}
 	</div>
 ```
-```
+```html
 	<div>
   		<label>books</label><br>
   		<select v-model="books">
@@ -25,7 +25,7 @@
   		{{ books }}
 	</div>
 ```
-```
+```html
     <div>
         <label for="">select the colors you like</label><br>
         <input
