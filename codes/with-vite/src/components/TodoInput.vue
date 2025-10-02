@@ -1,9 +1,11 @@
 <script setup>
-    var title_todo  = '';
-    var completed   = false;
-
-    function addTodo(){
-        console.log('teste1');
+    import { ref } from 'vue'
+    
+    const title_todo = ref('')
+    const completed = ref(false)
+    
+    function addTodo() {
+      console.log('teste1', title_todo.value, completed.value)
     }
 </script>
 <template>
@@ -21,7 +23,7 @@
                 v-model="completed"
                 type="checkbox">
 
-            <button @click="addTodo"></button>
+           <button type="button" @click="addTodo">Adicionar</button>
         </form>
     </div>
 </template>
