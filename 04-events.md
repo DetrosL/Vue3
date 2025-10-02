@@ -3,7 +3,7 @@
 `v-on`: or shorthand `@`
 
 #### example:
-```
+```html
     <button @click="onClick" class="button">
         Send
     </button>
@@ -13,7 +13,7 @@
         Mouse Over/Out
     </div>
 ```
-```
+```js
     methods: {
         onClick($evt){console.log('click',$evt);},
         onMouseOver($evt){console.log('mouse over', $evt);},
@@ -25,7 +25,7 @@
 `.stop`, `.prevent`, `.self`, `.capture`, `.once`, `.passive`
 
 #### examples:
-```
+```html
     <!-- the click event's propagation will be stopped -->
     <a @click.stop="doThis"></a>
 
@@ -36,7 +36,7 @@
     <div @click.self="doThat">...</div>
 ```
 `.capture`, `.once` and `.passive` modifiers mirror the options of the native addEventListener method:
-```
+```html
     <!-- use capture mode when adding the event listener     -->
     <div @click.capture="doThis">...</div>
 
