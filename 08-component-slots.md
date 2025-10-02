@@ -5,20 +5,20 @@
 * if the parent does not provide content for the slot, you can define default content inside the `<slot>` tag.
 
 #### example 1:
-```
+```html
 <!-- base -->
 <button class="fancy-btn">
   <slot></slot>
 </button>
 ```
-```
+```html
 <!-- parent -->
 <FancyButton>
   click me!
 </FancyButton>
 ```
 #### example 2:
-```
+```html
 <!-- base -->
 <header class="header">
   <h1>
@@ -33,7 +33,7 @@
   </div>
 </header>
 ```
-```
+```html
 <!-- parent -->
 <div>
   <Base>
