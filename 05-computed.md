@@ -4,12 +4,12 @@
 - **Computed** → only recalculates when the variables it depends on change.
 - **Method** → runs every time the template re-renders, even if nothing has changed.
 
-```
-<div>
+```html vue
+<div> 
 	{{ fullName }}
 </div>
 ```
-```
+```js
 export default {
 	data() {
 		return {
@@ -29,7 +29,7 @@ export default {
 }
 ```
 #### more completed example:
-```
+```html
     <div>
         <h2>todos incomplete</h2>
         <div
@@ -61,7 +61,7 @@ export default {
 
     </div>
 ```
-```
+```js
 export default {
     name: 'App',
     data() {
