@@ -1,5 +1,5 @@
 ## watchers
-```
+```html
     <div>
         <input 
             v-model="name"
@@ -8,7 +8,7 @@
     </div>
 ```
 #### as soon as I change this input, I want to save it to the database/run a secondary action.
-```
+```js
     export default {
         name: 'App',
         data() {
@@ -34,8 +34,7 @@
     }
 ```
 #### another example:
-
-```
+```html
     <div>
         <select v-model="pageCount">
             <option value="5">5</option>
@@ -46,7 +45,7 @@
     </div>
 ```
 #### as soon as I change this input, I want to save it to the database/run a secondary action.
-```
+```js
     export default {
         name: 'App',
         data() {
