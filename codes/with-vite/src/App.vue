@@ -1,10 +1,11 @@
-<script>
-    // import HelloWorld from './components/HelloWorld.vue'
-    import TodoInput from './components/TodoInput.vue';
+<script setup>
+    import TodoInput from './components/TodoInput.vue'
 </script>
 <template>
-    <TodoInput></TodoInput>
-    oi
+    <div>
+        <h1>oi</h1>
+        <TodoInput />
+    </div>
 </template>
 <!-- <style scoped>
 </style> -->
