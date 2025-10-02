@@ -1,11 +1,23 @@
 <script setup>
     import { ref } from 'vue'
-    
+
+    const list_todo = ref([])
     const title_todo = ref('')
     const completed = ref(false)
     
     function addTodo() {
-      console.log('teste1', title_todo.value, completed.value)
+        const lastId = list_todo.value.length > 0 
+        ? list_todo.value[list_todo.value.length - 1].id 
+        : 0
+
+        list_todo.value.push({
+            id: lastId + 1,
+            title: title_todo.value,
+            completed: completed.value,
+        })
+    
+        title_todo.value = ''
+        completed.value = false
     }
 </script>
 <template>
