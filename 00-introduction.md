@@ -17,9 +17,8 @@ it's a toolbox to make development easier
 
 ## How it can be used?
 #### example:
-```
+```js
     // declaration
-
     import { createApp, ref } from 'vue'
 
     createApp({
@@ -30,9 +29,8 @@ it's a toolbox to make development easier
     }
     }).mount('#app')
 ```
-```
+```html
     <!-- use -->
-
     <div id="app">
     <button @click="count++">
         Count is: {{ count }}
@@ -42,7 +40,7 @@ it's a toolbox to make development easier
 **result:** a button that increments the counter by 1 each time you click it
 
 #### if you want to add more actions, you just create functions inside `setup()` like this:
-```
+```js
     import { createApp, ref } from 'vue'
 
     createApp({
@@ -67,7 +65,7 @@ it's a toolbox to make development easier
 
 ```
 #### and to use them, just put `#app` on a `<div>` and attach the functions to buttons:
-```
+```html
     <div id="app">
         <p>Count is: {{ count }}</p>
         <button @click="count++">+1</button>
