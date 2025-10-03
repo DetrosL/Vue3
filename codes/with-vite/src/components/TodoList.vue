@@ -1,19 +1,14 @@
 <script setup>
-    const todo = [
-        {
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false
-        },
-        {
-            "id": 2,
-            "title": "quis ut nam facilis et officia qui",
-            "completed": true
-        },
-    ]
-</script>
-<template>
-</template>
-<!-- <style scoped>
+import { inject } from 'vue'
+import TodoItem from './TodoItem.vue'
 
-</style> -->
+const list_todo = inject('list_todo')
+</script>
+
+<template>
+  <div>
+    <div v-for="todo in list_todo" :key="todo.id" >
+        <TodoItem :todo="todo"/>
+    </div>
+  </div>
+</template>
