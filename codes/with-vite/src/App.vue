@@ -5,8 +5,8 @@
     import TodoList from './components/TodoList.vue'
     import { ref, provide } from 'vue'
 
-    const list_todo = ref([])
-    provide('list_todo', list_todo)
+    const list_todo = ref([]);
+    provide('list_todo', list_todo);
 </script>
 <template>
     <div>

@@ -1,9 +1,9 @@
 <script setup>
     import { ref, inject } from 'vue'
 
-    const list_todo     = inject('list_todo')
-    const title_todo    = ref('')
-    const completed     = ref('')
+    const list_todo     = inject('list_todo');
+    const title_todo    = ref('');
+    const completed     = ref('');
     
     function addTodo() {
         const lastId = list_todo.value.length > 0 ? list_todo.value[list_todo.value.length - 1].id : 0
@@ -14,28 +14,25 @@
             completed: completed.value,
         })
     
-        title_todo.value = ''
-        completed.value = ''
+        title_todo.value = '';
+        completed.value = '';
     }
 </script>
 <template>
     <div>
         <form @submit.prevent="addTodo"> <!-- previne o recarregamento da página e chama sua função. -->
-            <label for="title_todo">Title todo</label><br>
+            <label>Title todo</label><br>
             <input 
-                name="title_todo"
                 v-model="title_todo"
                 type="text">
             <br>
-            <label for="completed">Completed</label><br>
+            <label>Completed</label><br>
             <input 
-                name="completed"
                 v-model="completed"
                 type="radio"
                 :value="true"> Yes
                 
             <input 
-                name="completed"
                 v-model="completed"
                 type="radio"
                 :value="false"> No

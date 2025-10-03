@@ -2,18 +2,17 @@
     import { defineProps } from 'vue';
 
     const props = defineProps({
-        todo: {
-            type: Object,
-            required: true
-        }
-    });
+        titleD: String,
+        completed: Boolean
+    })
+
 </script>
 <template>
     <div class="card">
-        <!-- <h3> {{ todo.title }} </h3> -->
-         <h3>test</h3>
-        <!-- <p>Status: {{ todo.completed ? '✅ Done' : '❌ Pending' }}</p> -->
-         <p> stts</p>
+        <h3> {{ props.titleD }} </h3>
+        <!-- <h3>test</h3> -->
+        <p>Status: {{ props.completed ? '✅ Done' : '❌ Pending' }}</p>
+         <!-- <p> stts</p> -->
     </div>
 </template>
 <style scoped>
