@@ -11,8 +11,6 @@
 <template>
     <div>
         <TheHeader />
-        <TodoForm />
-        <TodoItem />
         <TodoList />
     </div>
 </template>

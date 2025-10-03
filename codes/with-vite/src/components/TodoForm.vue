@@ -10,7 +10,7 @@
 
         list_todo.value.push({
             id: lastId + 1,
-            title: title_todo.value,
+            titleD: title_todo.value,
             completed: completed.value,
         })
     
@@ -50,6 +50,7 @@
         max-width: 400px;
         margin: 0 auto;
         border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
     label {
